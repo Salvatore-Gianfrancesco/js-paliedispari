@@ -3,10 +3,13 @@ const h1EL = document.querySelector("h1");
 const word = prompt("Inserisci una parola");
 // console.log(word);
 
-const wordReversed = reverseWord(word);
+const wordTemp = word.toUpperCase();
+// console.log(wordTemp);
+
+const wordReversed = reverseWord(wordTemp);
 // console.log(wordReversed);
 
-if (word === wordReversed) {
+if (wordTemp === wordReversed) {
     console.log("La parola inserita è un palindromo");
     h1EL.innerHTML = "La parola inserita è un palindromo";
 } else {
