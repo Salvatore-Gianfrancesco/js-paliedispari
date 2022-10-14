@@ -1,3 +1,6 @@
+const h1El = document.querySelector("h1");
+const h2El = document.querySelector("h2");
+
 let choice;
 do {
     choice = prompt("Scegli pari o dispari. ('pari' - 'dispari')");
@@ -22,12 +25,15 @@ const sum = num + userNumber;
 
 console.log(`Il numero estratto da computer è ${num}`);
 console.log(`La somma tra i due numeri è ${sum}`);
+h2El.innerHTML = `Il numero estratto da computer è ${num}. La somma tra i due numeri è ${sum}`
 
 const result = isEvenOdd(sum);
 if (result === choice) {
     console.log("Hai vinto!!");
+    h1El.innerHTML = "Hai vinto!!";
 } else {
     console.log("Hai perso!!");
+    h1El.innerHTML = "Hai perso!!";
 }
 
 function generateRandom() {
